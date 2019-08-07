@@ -7,7 +7,7 @@ RUN git clone https://github.com/dwango/fialyzer.git
 
 WORKDIR fialyzer
 RUN opam update
-RUN opam pin add -y --debug fialyzer .
+RUN opam pin add -y fialyzer .
 RUN eval $(opam env) && make
 
 RUN mkdir /home/opam/fialyzer
